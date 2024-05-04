@@ -120,7 +120,7 @@ def main():
                 if st.button(f"Delete {selected_file}", key=f"delete_btn_{selected_file}"):
                     os.remove(audio_file_path)
                     st.success(f"Audio file '{selected_file}' deleted successfully.")
-                    st.experimental_rerun()
+                    st.rerun()
 
 # Function to record audio
 def record_audio():
