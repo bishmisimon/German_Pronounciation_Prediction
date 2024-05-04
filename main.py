@@ -1,6 +1,7 @@
 import mysql.connector
 import streamlit as st
 import welcome
+
 import base64
 
 # Set page configuration
@@ -107,7 +108,7 @@ def main():
     if st.session_state.get("logged_in"):
         st.success("Logged in successfully to the Dashboard!")
         st.write("Redirecting to welcome page...")
-        welcome.main()  # Display the welcome page
+        welcome.main() # Display the welcome page
     else:
         st.markdown("<div class='centered' style='color: #4169E1;'><h1>User Authentication</h1></div>", unsafe_allow_html=True)
         st.markdown("<div class='centered'><p>Please login or register to access the application</p></div>", unsafe_allow_html=True)

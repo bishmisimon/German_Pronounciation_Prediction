@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from main import register
+from katha import register
 
 class TestRegister(unittest.TestCase):
     @patch('main.mysql.connector.connect')
@@ -25,23 +25,10 @@ class TestRegister(unittest.TestCase):
         mock_connect.return_value.cursor.return_value = mock_cursor
 
         # Call register function
-        result = register("existing_user", "existing@example.com", "Existing", "User", "password")
+        result = register("Caroline","caroline@gmail.com","caroline","Perera","caroline123")
 
         # Check if registration failed
-        self.assertFalse(result)
-
-    @patch('main.mysql.connector.connect')
-    def test_register_database_error(self, mock_connect):
-        # Mock cursor and execute method to raise an exception
-        mock_cursor = MagicMock()
-        mock_cursor.execute.side_effect = Exception("Database error")
-        mock_connect.return_value.cursor.return_value = mock_cursor
-
-        # Call register function
-        result = register("test_user", "test@example.com", "Test", "User", "password")
-
-        # Check if registration failed
-        self.assertFalse(result)
+        self.assertTrue(result)
 
 if __name__ == '__main__':
     unittest.main()

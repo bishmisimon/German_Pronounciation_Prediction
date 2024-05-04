@@ -1,5 +1,0 @@
-bish,bish,bishmisimon@gmail.com
-testuser,testpassword,testuser@example.com
-existinguser,password123,existinguser@example.comS
-newuser,password123,newuser@example.com
-Kevin,password123,newuser@example.com
