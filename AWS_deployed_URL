@@ -1,0 +1,12 @@
+Creating a EC2 User Instance in AWS
+Connect with the AWS client key!
+Go to the root and update Linux 
+Clone the git repository to EC2
+Install the libraries using requirements.txt in terminal
+pip3 requirement.txt
+then run the main.py using the command python3 streamlit run main.py
+after run then run the command nohup python3 streamlit run main.py
+
+
+URL for anywhere access:http://13.126.24.132:8501/
+
